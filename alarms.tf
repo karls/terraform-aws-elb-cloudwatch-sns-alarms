@@ -14,7 +14,7 @@ resource "aws_cloudwatch_metric_alarm" "elb_5xx" {
   namespace           = "AWS/ELB"
   treat_missing_data = "notBreaching"
 
-  dimensions {
+  dimensions = {
     LoadBalancerName = "${var.load_balancer_name}"
   }
 
@@ -42,7 +42,7 @@ resource "aws_cloudwatch_metric_alarm" "backend_5xx" {
   namespace           = "AWS/ELB"
   treat_missing_data = "notBreaching"
 
-  dimensions {
+  dimensions = {
     LoadBalancerName = "${var.load_balancer_name}"
   }
 
@@ -70,7 +70,7 @@ resource "aws_cloudwatch_metric_alarm" "target_connection_error" {
   namespace           = "AWS/ELB"
   treat_missing_data = "notBreaching"
 
-  dimensions {
+  dimensions = {
     LoadBalancerName = "${var.load_balancer_name}"
   }
 
@@ -98,7 +98,7 @@ resource "aws_cloudwatch_metric_alarm" "latency" {
   namespace           = "AWS/ELB"
   treat_missing_data = "notBreaching"
 
-  dimensions {
+  dimensions = {
     LoadBalancerName = "${var.load_balancer_name}"
   }
 
@@ -126,7 +126,7 @@ resource "aws_cloudwatch_metric_alarm" "unhealthy_hosts" {
   namespace           = "AWS/ELB"
   treat_missing_data = "notBreaching"
 
-  dimensions {
+  dimensions = {
     LoadBalancerName = "${var.load_balancer_name}"
   }
 
@@ -154,7 +154,7 @@ resource "aws_cloudwatch_metric_alarm" "healthy_hosts" {
   namespace           = "AWS/ELB"
   treat_missing_data = "breaching"
 
-  dimensions {
+  dimensions = {
     LoadBalancerName = "${var.load_balancer_name}"
   }
 
