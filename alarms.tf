@@ -15,7 +15,7 @@ resource "aws_cloudwatch_metric_alarm" "elb_5xx" {
   treat_missing_data = "notBreaching"
 
   dimensions {
-    "LoadBalancerName" = "${var.load_balancer_name}"
+    LoadBalancerName = "${var.load_balancer_name}"
   }
 
   statistic         = "Sum"
@@ -43,7 +43,7 @@ resource "aws_cloudwatch_metric_alarm" "backend_5xx" {
   treat_missing_data = "notBreaching"
 
   dimensions {
-    "LoadBalancerName" = "${var.load_balancer_name}"
+    LoadBalancerName = "${var.load_balancer_name}"
   }
 
   statistic         = "Sum"
@@ -71,7 +71,7 @@ resource "aws_cloudwatch_metric_alarm" "target_connection_error" {
   treat_missing_data = "notBreaching"
 
   dimensions {
-    "LoadBalancerName" = "${var.load_balancer_name}"
+    LoadBalancerName = "${var.load_balancer_name}"
   }
 
   statistic         = "Sum"
@@ -99,7 +99,7 @@ resource "aws_cloudwatch_metric_alarm" "latency" {
   treat_missing_data = "notBreaching"
 
   dimensions {
-    "LoadBalancerName" = "${var.load_balancer_name}"
+    LoadBalancerName = "${var.load_balancer_name}"
   }
 
   statistic         = "Average"
@@ -127,7 +127,7 @@ resource "aws_cloudwatch_metric_alarm" "unhealthy_hosts" {
   treat_missing_data = "notBreaching"
 
   dimensions {
-    "LoadBalancerName" = "${var.load_balancer_name}"
+    LoadBalancerName = "${var.load_balancer_name}"
   }
 
   statistic         = "Minimum"
@@ -155,7 +155,7 @@ resource "aws_cloudwatch_metric_alarm" "healthy_hosts" {
   treat_missing_data = "breaching"
 
   dimensions {
-    "LoadBalancerName" = "${var.load_balancer_name}"
+    LoadBalancerName = "${var.load_balancer_name}"
   }
 
   statistic         = "Maximum"
