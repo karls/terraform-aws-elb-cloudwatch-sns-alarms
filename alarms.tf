@@ -1,5 +1,5 @@
 module "elb_5xx_label" {
-  source     = "git::https://github.com/cloudposse/terraform-terraform-label.git?ref=tags/0.1.3"
+  source     = "git::https://github.com/cloudposse/terraform-terraform-label.git?ref=tags/0.4.0"
   name       = "${var.name}"
   namespace  = "${var.namespace}"
   stage      = "${var.stage}"
@@ -27,7 +27,7 @@ resource "aws_cloudwatch_metric_alarm" "elb_5xx" {
 }
 
 module "backend_5xx_label" {
-  source     = "git::https://github.com/cloudposse/terraform-terraform-label.git?ref=tags/0.1.3"
+  source     = "git::https://github.com/cloudposse/terraform-terraform-label.git?ref=tags/0.4.0"
   name       = "${var.name}"
   namespace  = "${var.namespace}"
   stage      = "${var.stage}"
@@ -55,7 +55,7 @@ resource "aws_cloudwatch_metric_alarm" "backend_5xx" {
 }
 
 module "target_connection_error_label" {
-  source     = "git::https://github.com/cloudposse/terraform-terraform-label.git?ref=tags/0.1.3"
+  source     = "git::https://github.com/cloudposse/terraform-terraform-label.git?ref=tags/0.4.0"
   name       = "${var.name}"
   namespace  = "${var.namespace}"
   stage      = "${var.stage}"
@@ -83,7 +83,7 @@ resource "aws_cloudwatch_metric_alarm" "target_connection_error" {
 }
 
 module "latency_label" {
-  source     = "git::https://github.com/cloudposse/terraform-terraform-label.git?ref=tags/0.1.3"
+  source     = "git::https://github.com/cloudposse/terraform-terraform-label.git?ref=tags/0.4.0"
   name       = "${var.name}"
   namespace  = "${var.namespace}"
   stage      = "${var.stage}"
@@ -111,7 +111,7 @@ resource "aws_cloudwatch_metric_alarm" "latency" {
 }
 
 module "unhealthy_hosts_label" {
-  source     = "git::https://github.com/cloudposse/terraform-terraform-label.git?ref=tags/0.1.3"
+  source     = "git::https://github.com/cloudposse/terraform-terraform-label.git?ref=tags/0.4.0"
   name       = "${var.name}"
   namespace  = "${var.namespace}"
   stage      = "${var.stage}"
@@ -139,7 +139,7 @@ resource "aws_cloudwatch_metric_alarm" "unhealthy_hosts" {
 }
 
 module "healthy_hosts_label" {
-  source     = "git::https://github.com/cloudposse/terraform-terraform-label.git?ref=tags/0.1.3"
+  source     = "git::https://github.com/cloudposse/terraform-terraform-label.git?ref=tags/0.4.0"
   name       = "${var.name}"
   namespace  = "${var.namespace}"
   stage      = "${var.stage}"
